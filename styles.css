@@ -1,0 +1,161 @@
+body {
+    background-color: #13161b !important;
+  }
+  
+  a {
+    color: #ffffff !important;
+    text-decoration: none;
+    position: relative;
+    color: white; /* Text color */
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: #00ffff; 
+    transition: width 0.3s ease-out;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+  
+  /* Remove default underline */
+  .nav-link {
+      text-decoration: none;
+      position: relative;
+      color: white; /* Text color */
+    }
+    
+    /* Add underline animation on hover */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px; /* Underline thickness */
+      background-color: #00ffff; /* Custom underline color */
+      transition: width 0.3s ease-out; /* Animation for underline */
+    }
+    
+    .nav-link:hover::after {
+      width: 100%; /* Full width of the link */
+    }
+    
+    /* Add underline for the active nav link */
+    .nav-link.active::after {
+      width: 100%;
+      background-color: #00ffff; /* Underline color for active item */
+    }
+  
+  
+    /*Banner text change animation*/
+    .banner {
+      position: relative;
+      min-height: 10rem; 
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: center;
+    }
+  
+  .box{
+    color: white;
+    font-size: 9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .text1{
+    animation: ani1 10s infinite;
+  }
+    
+  .text2{
+    animation: ani2 10s infinite;
+  }
+  
+  .text3{
+    animation: ani3 10s infinite;
+  }
+  
+  .text4{
+    animation: ani4 10s infinite;
+  }
+  
+  .text5{
+    animation: ani5 10s infinite;
+  }
+  
+  
+  @keyframes ani1 {
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+    20%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes ani2 {
+    20%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
+    40%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes ani3 {
+    40%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    60%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes ani4 {
+    60%{
+      opacity: 0;
+    }
+    70%{
+      opacity: 1;
+    }
+    80%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes ani5 {
+    80%{
+      opacity: 0;
+    }
+    90%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  
+  .quote {
+    font-family:'Poppins', sans-serif;
+    font-size: 3rem;
+    color: white;
+  }
+    
