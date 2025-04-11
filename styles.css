@@ -1,180 +1,327 @@
 body {
-    background-color: #13161b !important;
+  background-color: #13161b !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  position: relative;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/*underline animation on hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00ffff;
+  transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Add underline for the active nav link */
+.nav-link.active::after {
+  width: 100%;
+  background-color: #00ffff;
+}
+
+/* mobile navbar */
+
+.custom-toggler {
+  border-radius: 6px;
+  padding: 8px;
+  border: none !important;
+  cursor: pointer;
+}
+
+/* White hamburger icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  transition: background-color 0.3s ease;
+}
+
+.custom-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2300ffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#mobileNav {
+  display: none;
+  flex-direction: column;
+}
+
+/* Show only on small screens */
+@media (max-width: 575.98px) {
+  .desktop-nav {
+    display: none !important;
   }
-  
-  a {
+
+  #mobileNav.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw;
+    height: 30vh;
+    margin-top: 2vh;
+  }
+
+  .mobile-nav-link{
     color: #ffffff !important;
     text-decoration: none;
-    position: relative;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .mobile-nav-item {
+    position: relative;
+    width: 100vw;
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
   }
   
-  a::after {
-    content: "";
+  .mobile-nav-item::after {
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0;
-    height: 2px; 
-    background-color: #00ffff; 
-    transition: width 0.3s ease-out;
-  }
-  
-  a:hover::after {
     width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(104, 104, 104, 0) 0%, rgb(63, 63, 63) 50%, rgba(104, 104, 104, 0) 100%);
   }
-  
-  .nav-link {
-      text-decoration: none;
-      position: relative;
-      color: white; /* Text color */
-    }
-    
-    /*underline animation on hover */
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px; 
-      background-color: #00ffff; 
-      transition: width 0.3s ease-out; 
-    }
-    
-    .nav-link:hover::after {
-      width: 100%; 
-    }
-    
-    /* Add underline for the active nav link */
-    .nav-link.active::after {
-      width: 100%;
-      background-color: #00ffff; 
-    }
-  
-  
-    /*Banner text change animation*/
-    .quote {
-      font-family:'Poppins', sans-serif;
-      font-weight: bold;
-      font-size: clamp(30px,2vw + 1rem,50px);
-      color: white;
-      width: 1100px;
-    }
-  
-    .quote-div{
-      display: flex;
-      justify-content: center;
-      margin-top: 5vh;
-    }
 
-    .banner {
-      position: relative;
-      min-height: 10rem; 
-      margin-top: 20vh;
-      margin-bottom: 20vh;
-      display: flex;
-      justify-content: center;
-    }
-  
-  .box{
-    color: white;
-    font-size: clamp(55px,8vw + 1rem,500px);
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
+  .mobile-nav-item:hover{
+    background-color: #00ffff;
+  }
+
+ 
+}
+
+/* Hide mobile nav on large screens */
+@media (min-width: 576px) {
+  #mobileNav {
+    display: none !important;
+  }
+}
+
+/*Banner text change animation*/
+.quote {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: clamp(30px, 2vw + 1rem, 50px);
+  color: white;
+  width: 1100px;
+}
+
+.quote span {
+  color: #00ffff;
+}
+
+.quote-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.banner {
+  position: relative;
+  min-height: 10rem;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  color: white;
+  font-size: clamp(55px, 8vw + 1rem, 500px);
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  opacity: 0;
+  position: absolute;
+}
+
+.text1 {
+  animation: ani1 10s infinite;
+}
+
+.text2 {
+  animation: ani2 10s infinite;
+}
+
+.text3 {
+  animation: ani3 10s infinite;
+}
+
+.text4 {
+  animation: ani4 10s infinite;
+}
+
+.text5 {
+  animation: ani5 10s infinite;
+}
+
+@keyframes ani1 {
+  0% {
     opacity: 0;
-    position: absolute;
   }
-  
-  .text1{
-    animation: ani1 10s infinite;
+  10% {
+    opacity: 1;
   }
-    
-  .text2{
-    animation: ani2 10s infinite;
+  20% {
+    opacity: 0;
   }
-  
-  .text3{
-    animation: ani3 10s infinite;
-  }
-  
-  .text4{
-    animation: ani4 10s infinite;
-  }
-  
-  .text5{
-    animation: ani5 10s infinite;
-  }
-  
-  
-  @keyframes ani1 {
-    0%{
-      opacity: 0;
-    }
-    10%{
-      opacity: 1;
-    }
-    20%{
-      opacity: 0;
-    }
-  }
-  
-  @keyframes ani2 {
-    20%{
-      opacity: 0;
-    }
-    30%{
-      opacity: 1;
-    }
-    40%{
-      opacity: 0;
-    }
-  }
-  
-  @keyframes ani3 {
-    40%{
-      opacity: 0;
-    }
-    50%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 0;
-    }
-  }
-  
-  @keyframes ani4 {
-    60%{
-      opacity: 0;
-    }
-    70%{
-      opacity: 1;
-    }
-    80%{
-      opacity: 0;
-    }
-  }
-  
-  @keyframes ani5 {
-    80%{
-      opacity: 0;
-    }
-    90%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
-  }
-  
+}
 
-
-  @media (max-width: 700px) {
-    .banner {
-      margin-bottom: -4vh;
-    }
-    .navbar{
-      margin-bottom: -10vh;
-    }
+@keyframes ani2 {
+  20% {
+    opacity: 0;
   }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes ani3 {
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+}
+
+@keyframes ani4 {
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+}
+
+@keyframes ani5 {
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    margin-bottom: -4vh;
+  }
+  .navbar {
+    margin-bottom: -10vh;
+  }
+}
+
+/* Images */
+.images {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  cursor: pointer;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.img-title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  margin-top: 10px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.footer {
+  margin-bottom: 30vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer h1 {
+  font-size: clamp(55px, 4vw + 1rem, 350px);
+  font-weight: bolder;
+  margin-top: 20vh;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.footer h2 {
+  font-size: clamp(30px, 2vw + 1rem, 50px);
+  font-family: "Times New Roman", Times, serif;
+  color: #00ffff;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.email {
+  text-decoration: none;
+  font-size: clamp(20px, 1.3vw, 40px);
+  color: white;
+  font-style: italic;
+  margin-top: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.email:hover {
+  color: #00ffff;
+  cursor: pointer;
+}

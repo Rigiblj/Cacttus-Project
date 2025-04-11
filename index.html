@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,23 +30,21 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg w-100">
+    <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
-        <!-- Logo  -->
-        <a class="navbar-brand fw-bold" href="/Cacttus-Project/index.html"
-          >RIG</a
-        >
-
-        <!-- Nav Items -->
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarCentered"
-        >
+        <!-- Logo -->
+        <a class="nav-link fw-bold fs-4" href="/Cacttus-Project/index.html">RIG</a>
+  
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler custom-toggler" type="button" id="navbarToggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Desktop Nav Items -->
+        <div class="collapse navbar-collapse justify-content-center desktop-nav">
           <ul class="navbar-nav gap-4">
             <li class="nav-item">
-              <a class="nav-link active" href="/Cacttus-Project/index.html"
-                >Home</a
-              >
+              <a class="nav-link active" href="/Cacttus-Project/index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -56,7 +55,26 @@
           </ul>
         </div>
       </div>
+  
+      <!-- Mobile Nav (separate block) -->
+      
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="navbar-nav">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link active" href="/Cacttus-Project/index.html">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">About</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      
     </nav>
+  
+   
 
     <!-- Banner -->
     <div class="container-fluid">
@@ -72,22 +90,174 @@
           <div class="quote-div">
             <h2 class="quote text-white text-center">
               Unleash the Power of Photos - Where Moments Stay
-              <span class="text-info">Forever</span>
+              <span>Forever</span>
             </h2>
           </div>
         </div>
       </div>
     </div>
 
-
     <!-- Photography divs -->
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <img src="" alt="">
+    <div class="container-fluid" style="margin-top: 15vh;">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/boat.jpg" alt="Waves & wonders" />
+          </div>
+          <p class="img-title">Waves & wonders</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/une.jpg" alt="Lost in The Fog" />
+          </div>
+          <p class="img-title">Lost in The Fog</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/crows.jpg" alt="Everyone Needs a Friend" />
+          </div>
+          <p class="img-title">Everyone Needs a Friend</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/olti4.jpg" alt="Head in The Clouds" />
+          </div>
+          <p class="img-title">Head in The Clouds</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/olti2.JPG" alt="Brother" />
+          </div>
+          <p class="img-title">Brother</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/olti3.JPG" alt="Nature's Child" />
+          </div>
+          <p class="img-title">Nature's Child</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/uneliri.JPG" alt="Above & Beyond" />
+          </div>
+          <p class="img-title">Above & Beyond</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/lightning.jpg" alt="Striking Twice" />
+          </div>
+          <p class="img-title">Striking Twice</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/municipio.jpg" alt="Stones of Story" />
+          </div>
+          <p class="img-title">Stones of Story</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/liri.JPG" alt="Guided By Light" />
+          </div>
+          <p class="img-title">Guided By Light</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/koifish.JPG" alt="Koi" />
+          </div>
+          <p class="img-title">Koi</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/olti1.JPG" alt="Worldwide" />
+          </div>
+          <p class="img-title">Worldwide</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/IMG_0859.JPG" alt="Never too Old" />
+          </div>
+          <p class="img-title">Never too Old</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/gradish.JPG" alt="Life" />
+          </div>
+          <p class="img-title">Life</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/oltiliri.JPG" alt="Two Souls One View" />
+          </div>
+          <p class="img-title">Two Souls One View</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/prizreni.JPG" alt="Urban Poetry" />
+          </div>
+          <p class="img-title">Urban Poetry</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/quintoroad.jpg" alt="Echoes Remain" />
+          </div>
+          <p class="img-title">Echoes Remain</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/sheep.JPG" alt="Simple Peace" />
+          </div>
+          <p class="img-title">Simple Peace</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/tree.jpg" alt="Caged Memories" />
+          </div>
+          <p class="img-title">Caged Memories</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="images">
+            <img src="/Cacttus-Project/Images/wildflower.JPG" alt="Wild Beauty" />
+          </div>
+          <p class="img-title">Wild Beauty</p>
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="footer col">
+      <h1>CREATE GREATNESS TOGETHER!</h1>
+      <h2>Your next breakthrough!</h2>
+      <a href="#" class="email">Rig.balaj@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+crossorigin="anonymous"
+></script>
   </body>
 </html>
