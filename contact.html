@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIG</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script src="script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&family=Raleway&family=Playfair+Display&family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="nav-link fw-bold fs-4" href="/Cacttus-Project/index.html"
+          >RIG</a
+        >
+
+        <!-- Toggle Button for Mobile -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          id="navbarToggle"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Desktop Nav Items -->
+        <div
+          class="collapse navbar-collapse justify-content-center desktop-nav"
+        >
+          <ul class="navbar-nav gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="/Cacttus-Project/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Cacttus-Project/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/Cacttus-Project/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+
+      <div class="mobile-nav" id="mobileNav">
+        <ul class="navbar-nav">
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="/Cacttus-Project/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="/Cacttus-Project/about.html"
+              >About</a
+            >
+          </li>
+          <li class="mobile-nav-item">
+            <a
+              class="mobile-nav-link active"
+              href="/Cacttus-Project/contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <h1 class="banner">
+            <span>Contact</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="angled-images-container">
+          <div class="image-wrapper left-img animate__animated animate__slideInLeft">
+            <img src="images/contact1.jpg" alt="Person 1"/>
+          </div>
+          <div class="image-wrapper right-img animate__animated animate__slideInRight">
+            <img src="images/contact2.jpg" alt="Person 2" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid form-container" >
+      <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+              <form id="contactForm">
+                  <div class="mb-3 animation">
+                      <label for="name" class="form-label">Your name</label>
+                      <input type="text" id="name" class="form-control" required>
+                  </div>
+
+                  <div class="mb-3 animation">
+                      <label for="email" class="form-label">Your email</label>
+                      <input type="email" id="email" class="form-control" required>
+                  </div>
+
+                  <div class="mb-3 animation">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" id="subject" class="form-control" required>
+                  </div>
+
+                  <div class="mb-3 animation">
+                      <label for="message" class="form-label">Your message (optional)</label>
+                      <textarea id="message" rows="6" class="form-control"></textarea>
+                  </div>
+
+                  <button type="submit" class="submit-btn animation">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+   
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="footer col">
+        <h1>CREATE GREATNESS TOGETHER!</h1>
+        <h2>Your next breakthrough!</h2>
+        <a href="#" class="email">Rig.balaj@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

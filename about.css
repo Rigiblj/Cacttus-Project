@@ -1,5 +1,11 @@
 body {
   background-color: #13161b !important;
+  overflow-x: hidden;
+}
+
+::selection{
+  background-color: #00ffff;
+  color: white;
 }
 
 /* NavBar CSS */

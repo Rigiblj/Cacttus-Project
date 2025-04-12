@@ -1,0 +1,297 @@
+body {
+    background-color: #13161b !important;
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  ::selection{
+    background-color: #00ffff;
+    color: white;
+  }
+  
+  /* NavBar CSS */
+  
+  .nav-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /*underline animation on hover */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ffff;
+    transition: width 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Add underline for the active nav link */
+  .nav-link.active::after {
+    width: 100%;
+    background-color: #00ffff;
+  }
+  
+  /* mobile navbar */
+  
+  .custom-toggler {
+    border-radius: 6px;
+    padding: 8px;
+    border: none !important;
+    cursor: pointer;
+  }
+  
+  /* White hamburger icon */
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2300ffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  #mobileNav {
+    display: none;
+    flex-direction: column;
+  }
+  
+  /* Show only on small screens */
+  @media (max-width: 575.98px) {
+    .desktop-nav {
+      display: none !important;
+    }
+  
+    #mobileNav.show {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 100vw;
+      height: 30vh;
+      margin-top: 2vh;
+    }
+  
+    .mobile-nav-link {
+      color: #ffffff !important;
+      text-decoration: none;
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+  
+    .mobile-nav-item {
+      position: relative;
+      width: 100vw;
+      cursor: pointer;
+      text-align: center;
+      height: 30px;
+    }
+  
+    .mobile-nav-item::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(104, 104, 104, 0) 0%,
+        rgb(63, 63, 63) 50%,
+        rgba(104, 104, 104, 0) 100%
+      );
+    }
+  
+    .mobile-nav-item:hover {
+      background-color: #00ffff;
+    }
+  }
+  
+  /* Hide mobile nav on large screens */
+  @media (min-width: 576px) {
+    #mobileNav {
+      display: none !important;
+    }
+  }
+  
+  .banner {
+    position: relative;
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    animation: zoomIn;
+    animation-duration: 2s;
+  }
+
+  .banner span {
+    color: white;
+    font-size: clamp(55px, 7vw + 1rem, 500px);
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+  }
+
+  .angled-images-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .image-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  
+  .image-wrapper:not(:first-child) {
+    margin-left: -10%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .angled-images-container {
+        flex-direction: row;
+      }
+
+      .image-wrapper:not(:first-child) {
+        margin-left: -5%;
+      }
+    
+      .left-img img,
+      .right-img img {
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      }
+    
+      .right-img img {
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: -5px;
+      }
+    
+      .image-wrapper {
+        height: 250px;
+      }
+
+      .form-container{
+        margin-top: -30vh;
+      }
+  }
+  
+
+   .form-label {
+    color: #ccc !important;
+    font-weight: 400;
+  }
+
+  .form-control {
+    background-color: #13161b !important;
+    color: #fff !important;
+    border: 1px solid #2a2c30 !important;
+  }
+
+  .form-control:focus {
+    background-color: #13161b !important;
+    color: #fff !important;
+    border-color: #00fff7 !important;
+    box-shadow: none !important;
+  }
+
+  .submit-btn {
+    background-color: #00fff7 !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #00d9d2 !important;
+  }
+
+  /* Form spacing */
+  #contactForm {
+    margin-top: 20vh;
+  }
+
+  .animation{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 5%;
+  }
+
+
+  .footer {
+    margin-bottom: 30vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .footer h1 {
+    font-size: clamp(55px, 4vw + 1rem, 350px);
+    font-weight: bolder;
+    margin-top: 20vh;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .footer h2 {
+    font-size: clamp(30px, 2vw + 1rem, 50px);
+    font-family: "Times New Roman", Times, serif;
+    color: #00ffff;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .email {
+    text-decoration: none;
+    font-size: clamp(20px, 1.3vw, 40px);
+    color: white;
+    font-style: italic;
+    margin-top: 30px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  
+  .email:hover {
+    color: #00ffff;
+    cursor: pointer;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }

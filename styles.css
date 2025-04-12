@@ -2,6 +2,11 @@ body {
   background-color: #13161b !important;
 }
 
+::selection{
+  background-color: #00ffff;
+  color: white;
+}
+
 .nav-link {
   color: #ffffff !important;
   text-decoration: none;
